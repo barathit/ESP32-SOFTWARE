@@ -1,0 +1,19 @@
+.operation-info {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  border-left: 4px solid #667eea;
+}
+
+.operation-info p {
+  margin: 8px 0;
+  color: #374151;
+  font-size: 15px;
+}
+
+.operation-info p strong {
+  color: #111827;
+  font-weight: 600;
+}
+

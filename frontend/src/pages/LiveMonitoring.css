@@ -1,0 +1,248 @@
+.monitoring-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.monitoring-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.monitoring-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.monitoring-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-family: monospace;
+}
+
+.btn-end-operation {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-end-operation:hover {
+  background-color: #b91c1c;
+}
+
+.monitoring-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.card p {
+  margin: 8px 0;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.card p strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.fighters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.fighter-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid #e5e7eb;
+}
+
+.fighter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fighter-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.status-icon {
+  font-size: 28px;
+}
+
+.fighter-card h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fighter-card p {
+  margin: 8px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.status-text {
+  font-weight: 600;
+  margin-top: 12px !important;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.no-data {
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Status Colors */
+.status-normal {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.status-normal .status-text {
+  color: #059669;
+}
+
+.status-attention {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.status-attention .status-text {
+  color: #d97706;
+}
+
+.status-emergency {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  animation: pulse-border 2s infinite;
+}
+
+.status-emergency .status-text {
+  color: #dc2626;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: #ef4444;
+  }
+  50% {
+    border-color: #dc2626;
+  }
+}
+
+.fighter-details {
+  margin-top: 24px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.detail-item {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.detail-item label {
+  display: block;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item span {
+  font-size: 20px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.timestamp {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .monitoring-title {
+    font-size: 24px;
+  }
+
+  .monitoring-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-end-operation {
+    width: 100%;
+  }
+
+  .fighters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
